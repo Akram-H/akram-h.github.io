@@ -206,9 +206,11 @@ ul#nav li.current a { color: rgb(252, 52, 185); }
 }
 #about h4{
    font: 'opensans', sans-serif;
-   font-size: 16px;
+   font-size: 15px;
    color: #cecece;
    margin: 5% 10% 5% 10%;
+   padding-left: 10%;
+   padding-right: 10%;
 }
 #about img{
  border-radius: 15px;
@@ -238,10 +240,12 @@ ul#nav li.current a { color: rgb(252, 52, 185); }
 }
 #download h4{
    font: 'opensans', sans-serif;
-   font-size: 16px;
+   font-size: 15px;
    color: #cecece;
-   opacity: 0.5;
    margin: 1% 10% 5% 10%;
+   padding-top: 2.5%;
+   padding-left: 10%;
+   padding-right: 10%;
 }
 #download h2{
    font: 'opensans', sans-serif;
@@ -295,13 +299,12 @@ ul#nav li.current a { color: rgb(252, 52, 185); }
 }
 #status h4{
    font: 'opensans', sans-serif;
-   font-size: 18px;
+   font-size: 15px;
    color: #fff;
+   padding-top: 2.5%;
+   padding-left: 10%;
+   padding-right: 10%;
 }
-#status img {
-   border-radius: 15px;
-}
-
 #contact {
    text-align: center;
    background: #2B2B2B;
