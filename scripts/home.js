@@ -3,6 +3,13 @@ auth.onAuthStateChanged(user => {
     if (user){
         console.log('logged in as', user.displayName)
         text.style.display = 'block'
+        db.collection("User").where("email", "==", user.email).get().then(snapshot => {
+            snapshot.forEach(doc => {
+                document.querySelector('#title').innerHTML = `Lol, ${doc.data().username} is kinda ugly`
+            })
+            
+        })
+        
     } else {
         text.style.display = 'none'
     }
