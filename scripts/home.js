@@ -1,8 +1,10 @@
 auth.onAuthStateChanged(user => {
+    text = document.querySelector('.lol')
     if (user){
         console.log('logged in as', user.displayName)
+        text.style.display = 'block'
     } else {
-        console.log('Not logged in')
+        text.style.display = 'none'
     }
     setupUI(user)
 })
