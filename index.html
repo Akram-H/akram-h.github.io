@@ -1,147 +1,54 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Mina</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-   <!-- Mobile Specific Metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
-
-   <!-- Script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-
-   <!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="icon.png" >
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>MinaStar</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
-
-<body>
-
-   <!-- Header
-   ================================================== -->
-   <header id="home">
-
-      <nav id="nav-wrap">
-
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">About</a></li>
-            <li><a class="smoothscroll" href="#download">Download</a></li>
-            <li><a class="smoothscroll" href="#status">Status</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-         </ul> <!-- end #nav -->
-
-      </nav> <!-- end #nav-wrap -->
-
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">Mina Game Engine</h1>
-            <h3>The Python based game engine from the stars.</h3>
-            <hr/>
-         </div>
-      </div>
-
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
-
-   </header> <!-- Header End -->
-
-
-   <!--  Section
-   ================================================== -->
-   <section id="about">
-
-      <div class="row">
-         <div class="bub">
-            <h1>About</h1>
-            <h4>
-               Mina is based on Python and the first game engine that was created with 
-               Python and has an editor. The editor makes it easy to manage objects and 
-               create games in general.
-            </h4>
-            <img src="images/engine-exam.png" alt="engine-exam">
-            <h4>
-               Mina is completely free and open source. The code is published under the 
-               MIT license. The games you will make are fully yours.
-            </h4>
-         </div>
-      </div>
-
-   </section> <!-- About Section End-->
-   <section id="download">
-
-      <div class="row">
-         <div class="bub">
-            <h1>Code</h1>
-            <h4>
-               Mina runs currently only on Windows, but 
-               Compatibility with other platforms like MacOS
-               and Linux are planed for the Future.
-            </h4>
-            <ul id="btns">
-               <li id="a"><a href="https://github.com/Mina-Engine/Mina">Github Repository</a></li>
+    <body>
+        <div class="img-area"></div>
+        <nav class="nav">
+            
+            <div class="logo">
+                <h4>MinaStar</h4>
+            </div>
+            <ul class="nav-links">
+                <li style="display:none" class="logged-in"><a href="p/settings.html">Settings</a></li>
+                <li style="display:none" class="logged-in"><a id='logout' href="#">Logout</a></li>
+                <li style="display:none" class="logged-out"><a href="p/login.html">Login</a></li>
+                <li style="display:none" class="logged-out"><a href="p/signup.html">Sign Up</a></li>
             </ul>
-            </ul>
-         </div>
-      </div>
+            <div class='burger'>
+                <div class='line1'></div>
+                <div class='line2'></div>
+                <div class='line3'></div>
+            </div>
+        </nav>
+        <script src="scripts/navbar.js"></script>
 
-   </section> <!-- About Section End-->
-   <section id="status">
-      <div class="row">
-         <div class="bub">
-            <h1>Status</h1>
-            <h4>
-               Currently Mina hasn't been officialy released, 
-               the Alpha Version is still in work. You can 
-               folow the process of Mina by looking at the 
-               <a href="https://github.com/Mina-Engine/Mina">Github repository</a>.
-            </h4>
-         </div>
-      </div>
-   </section>
-   <section id="contact">
-      <div class="row">
-         <div class="bub">
-            <h1>Contact</h1>
-            <h4>
-            <h5>Akram Hssaini</h5>
-            <h5>mina.game.engine@gmail.com</h5>
-         </div>
-      </div>
-   </section> <!-- About Section End-->
+        <section class="app">
+            <div>
+                <h1>lol</h1>
+            </div>
+        </section>
 
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+        <script src="scripts/FirebaseConfig.js"></script>
 
-</body>
+        <script>
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+        </script>
 
+        <script src="scripts/home.js"></script>
+
+    </body>
 </html>

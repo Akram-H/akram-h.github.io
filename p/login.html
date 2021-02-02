@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="img-area"></div>
+    <div class="main_div">
+        <div class="box">
+            <h1>Login</h1>
+            <form action="" method="">
+                <div class="inputBox">
+                    <input type="text" id="email" autocomplete="off" required>
+                    <label> Email </label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="password" autocomplete="off" required>
+                    <label> Password </label>
+                </div>
+                <button class="submit" >Sign Up</button>
+                <h6>You don't have an Account? <a href="../p/signup.html">Click here</a></h6>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+    <script src="../scripts/FirebaseConfig.js"></script>
+    <script>
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script src="../scripts/login.js"></script>
+</body>
+</html>
