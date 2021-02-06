@@ -71,15 +71,40 @@ body {
     color:rgb(41, 122, 122) ;
     font-size: 12px;
 }
-.submit{
+.submit {
+    border-radius: 5px;
     background: transparent;
     border: none;
     outline: none;
-    color: rgb(226,226,266);
-    background: rgb(41, 122, 122);
     padding: 8px 16px;
-    border-radius: 5px;
+    line-height: 1.25;
+    background: rgb(41, 122, 122);
+    color: rgb(226,226,266);
+    position: relative;
+    text-decoration: none;
     font-size: 14px;
+    transition: background-color 0.6s ease;
+    overflow: hidden;
+}
+.submit:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform-style: flat;
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+.submit:focus, .submit:hover {
+    background: rgb(61, 160, 160);
+}
+.submit:active:after {
+    width: 200px;
+    height: 200px;
 }
 .box h6 {
     color: rgb(226,226,266);
@@ -90,4 +115,22 @@ body {
 .box a {
     text-decoration: none;
     color: rgb(163, 255, 255);
+}
+
+@media screen and (max-width: 768px){
+    .box {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 10px;
+    }
+}
+#Error {
+    color: rgb(177, 36, 36);
+    font-weight: 700;
+    margin-bottom: 10px;
 }

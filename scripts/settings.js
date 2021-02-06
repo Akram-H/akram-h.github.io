@@ -1,6 +1,6 @@
 const hidden = document.querySelectorAll('.load');
 var currentdata = {
-    id: "",
+    uid: "",
     username: ""
 }
 
@@ -14,18 +14,15 @@ auth.onAuthStateChanged(user => {
 })
 
 const setup = (user) => {
-    db.collection("User").where("email", "==", user.email).get().then(snapshot => {
-        snapshot.forEach(doc => {
-            currentdata.id = doc.id
-            currentdata.username = doc.data().username
+    db.collection("User").doc(user.uid.toString()).get().then(doc => {
+        currentdata.uid = doc.id
+        currentdata.username = doc.data().username
 
-            document.getElementById("username").value = doc.data().username;
-            document.getElementById("email").innerHTML = "Email: " + user.email;
-            document.getElementById("joined").innerHTML = "Joined at: " + doc.data().joined;
+        document.getElementById("username").value = doc.data().username;
+        document.getElementById("email").innerHTML = "Email: " + user.email;
+        document.getElementById("joined").innerHTML = "Joined at: " + doc.data().joined;
 
-            hidden.forEach(item => item.style.display = 'block');
-        })
-        
+        hidden.forEach(item => item.style.display = 'block');
     })
 }
 
@@ -40,7 +37,7 @@ update.addEventListener("click", (e)=>{
     e.preventDefault()
 
     if (currentdata.username != document.getElementById("username").value) {
-        db.collection('User').doc(currentdata.id).update({
+        db.collection('User').doc(currentdata.uid).update({
             username: document.getElementById("username").value
         })
     }

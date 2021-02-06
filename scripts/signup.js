@@ -1,13 +1,4 @@
 
-function validate(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(email)) {
-        return true
-    } else {
-        return false
-    }
-}
-
 
 const submit = document.querySelector('.submit');
 submit.addEventListener('click', (e) => {
@@ -17,24 +8,32 @@ submit.addEventListener('click', (e) => {
     const password = document.querySelector('#password').value;
     const username = document.querySelector('#username').value;
 
-    if (password.length>6){
-        if (validate(email)){
-            auth.createUserWithEmailAndPassword(email, password).then((res) => {
-                var today = new Date();
-                today = String(today.getDate()).padStart(2, '0') + '/' + String(today.getMonth() + 1).padStart(2, '0') + '/' + today.getFullYear();
-                db.collection('User').add({
-                    email: email,
-                    joined: today,
-                    username: username
-                }).then(() => {
-                    window.location.href="/"
-                })
+    const Error = document.querySelector('#Error')
+
+    if (email!="" && password!="" && username!="") {
+        auth.createUserWithEmailAndPassword(email, password).then((res) => {
+            var today = new Date();
+            today = String(today.getDate()).padStart(2, '0') + '/' + String(today.getMonth() + 1).padStart(2, '0') + '/' + today.getFullYear();
+    
+            console.log(res.user)
+            db.collection('User').doc(res.user.uid).set({
+                email: email,
+                joined: today,
+                username: username
+            }).then(()=>{
+                window.location.href="/"
             })
-        } else {
-            console.log('Email not valid')
-        }
-    } else {
-        console.log('Password needs longer then 6')
+        }).catch(err => {
+            if (err.code=="auth/invalid-email") {
+                Error.innerHTML = "Invalid Email."
+            } else if (err.code=="auth/weak-password") {
+                Error.innerHTML = "Your password must be longer than 6 characters."
+            } else if (err.code=="auth/email-already-in-use") {
+                Error.innerHTML = "Email already in use."
+            }
+        })   
+    }else{
+        Error.innerHTML = "Please fill in all fields."
     }
 })
 

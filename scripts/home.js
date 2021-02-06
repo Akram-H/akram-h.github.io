@@ -1,15 +1,10 @@
 auth.onAuthStateChanged(user => {
     text = document.querySelector('.lol')
     if (user){
-        console.log('logged in as', user.displayName)
-        text.style.display = 'block'
-        db.collection("User").where("email", "==", user.email).get().then(snapshot => {
-            snapshot.forEach(doc => {
-                document.querySelector('#title').innerHTML = `Lol, ${doc.data().username} is kinda ugly`
-            })
-            
+        db.collection("User").doc(user.uid.toString()).get().then(doc => {
+            document.querySelector('#title').innerHTML = `Lol, ${doc.data().username} is kinda ugly`
         })
-        
+        text.style.display = 'block'
     } else {
         text.style.display = 'none'
     }
