@@ -11,14 +11,27 @@
     <body>
         <div class="img-area"></div>
 
-        <section class="home">
-            <div>
-                <section class="lol" style="display:none">
-                    <h1 id="title">lol, Username ur Ugly</h1>
-                    <h4>Bitches on my face, but still drowning -.-</h4>
-                </section>
-            </div>
-        </section>
+        <div class="home">
+            <section>
+                <div style="display:none" class="logged-out" id="home-logged-out">
+                    <h4>U need to log in to view this page</h4>
+                </div>
+                <div style="display:none" class="logged-in" id="home-logged-in">
+                    <section class="lol">
+                        <h1 id="title">lol, Username ur Ugly</h1>
+                        <h4>Bitches on my face, but still drowning -.-</h4>
+
+
+                        <li>
+                            <input id="fn" type="text" placeholder="first number">
+                            <input id="sn" type="text" placeholder="second number">
+                            <button id="submit"> Get Results </button>
+                            <h4 id="results">Result: --</h4>
+                        </li>
+                    </section>
+                </div>
+            </section>
+        </div>
 
 
 

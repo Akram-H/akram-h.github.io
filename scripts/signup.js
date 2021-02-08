@@ -19,7 +19,8 @@ submit.addEventListener('click', (e) => {
             db.collection('User').doc(res.user.uid).set({
                 email: email,
                 joined: today,
-                username: username
+                username: username,
+                events: []
             }).then(()=>{
                 window.location.href="/"
             })
