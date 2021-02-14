@@ -20,7 +20,7 @@ submit.addEventListener('click', (e) => {
                 email: email,
                 joined: today,
                 username: username,
-                events: []
+                purchases: {}
             }).then(()=>{
                 window.location.href="/"
             })
