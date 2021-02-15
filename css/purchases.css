@@ -1,11 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 body {
     background-color: rgb(13, 39, 39);
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .img-area{
     background-image: url("../assets/bg.jpg");
@@ -21,7 +24,6 @@ body {
 }
 .main_div{
     width: 100%;
-    height: 100vh;
     position: relative;
 }
 .nav {
@@ -57,55 +59,74 @@ body {
     font-size: 20px;
 }
 .box {
-    background-color: transparent;
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 50px;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.486);
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 7.5px;
+    width: 90%;
+    height: 40vh;
+}
+.box h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.purchases {
+    width: 95%;
+    height: 80%;
+    overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 2.5%;
     background-color: rgba(0, 0, 0, 0.486);
     border: 1px solid rgb(68, 68, 68);
     border-radius: 7.5px;
 }
-.box h1 {
-    margin-bottom: 30px;
-    color: rgb(226,226,266);
-    text-transform: capitalize;
+.product {
+    background-color: rgba(34, 34, 34, 0.377);
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 7.5px;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.box .inputBox{
-    position: relative;
+.content {
+    height: 100%;
+    display: flex;
 }
-.box .inputBox input{
+.text {
+    display: block;
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: rgb(226,226,266);
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid rgb(226,226,266);
-    background: transparent;
-    outline: none;
+    max-width: 50%;
+    list-style: none;
 }
-.box .inputBox label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    letter-spacing: 1px;
-    padding: 10px 0;
-    font-size: 16px;
-    color: rgb(226,226,266);
-    transition: 0.5s;
+.text h1{
+    text-align: left;
+    width: auto;
+    margin-left: 15px;
+    margin-top: 12px;
 }
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color:rgb(41, 122, 122) ;
-    font-size: 12px;
+.text h4 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 15px;
 }
-.submit {
+.text .info {
+    display: flex;
+    margin-bottom: 15px;
+}
+.button {
+    width: 100%;
+    text-align: right;
+}
+.button button {
+    margin-right: 30px;
+    top: 30%;
     border-radius: 5px;
     background: transparent;
     border: none;
@@ -120,7 +141,7 @@ body {
     transition: background-color 0.6s ease;
     overflow: hidden;
 }
-.submit:after {
+.button button:after {
     content: "";
     position: absolute;
     width: 0;
@@ -133,33 +154,36 @@ body {
     border-radius: 100%;
     transition: width 0.3s ease, height 0.3s ease;
 }
-.submit:focus, .submit:hover {
+.button button:focus, .button button:hover {
     background: rgb(61, 160, 160);
 }
-.submit:active:after {
+.button button:active:after {
     width: 200px;
     height: 200px;
 }
-.box h6 {
-    color: rgb(226,226,266);
-    font-weight: lighter;
-    text-align: center;
-    padding-top: 20px;
-}
-.box a {
-    text-decoration: none;
-    color: rgb(163, 255, 255);
-}
 
+
+/*Responsive*/
+@media screen and (max-width: 1024px){
+    .text h1{
+        margin-top: 20px;
+    }
+    /*Shop*/
+    .home .shop {
+        margin-top: 28vh;
+    }
+}
 @media screen and (max-width: 768px){
+    /*Shop*/
     .box {
-        width: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 50px;
-        border-radius: 10px;
+        margin-top: 18vh;
+        height: 65vh;
+    }
+    .text .info {
+        display: block;
+    }
+    .text h1 {
+        font-size: 11x;
     }
     .nav h1 {
         padding-top: 0.8vh
@@ -168,8 +192,12 @@ body {
         margin-top: 17px;
     }
 }
-#Error {
-    color: rgb(177, 36, 36);
-    font-weight: 700;
-    margin-bottom: 10px;
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(41, 122, 122);
+    border-radius: 7.5px;
+    
 }

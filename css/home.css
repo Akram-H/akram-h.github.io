@@ -118,26 +118,12 @@
     .text h1{
         margin-top: 20px;
     }
-    /*Welcome*/
-    .home .welcome {
-        width: 65%;
-    }
-    .home .welcome h4{
-        font-size: 12px;
-    }
-    .home .welcome h1{
-        font-size: 17px;
-    }
     /*Shop*/
     .home .shop {
         margin-top: 28vh;
     }
 }
 @media screen and (max-width: 768px){
-    /*Welcome*/
-    .home .welcome {
-        width: 80%;
-    }
     /*Shop*/
     .home .shop {
         margin-top: 18vh;
