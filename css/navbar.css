@@ -44,7 +44,7 @@ html, body {
 .nav-links{
     display: flex;
     text-decoration: none;
-    width: 15%;
+    width: 25%;
     justify-content: space-around;
 }
 .nav-links li {
