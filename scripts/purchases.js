@@ -27,8 +27,8 @@ const SetupUI = (doc) => {
                     <li><h1>${data.product}</h1></li>
                     <li>
                         <div class="info">
-                            <h4>Status: In Work</h4>
-                            <h4>Date: 2/15/2021</h4>
+                            <h4>Status: ${data.status.status}</h4>
+                            <h4>Date: ${data.date}</h4>
                         </div>
                     </li>
                 </ul>
