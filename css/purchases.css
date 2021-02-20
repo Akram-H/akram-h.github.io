@@ -94,6 +94,7 @@ html, body {
     margin-right: 10px;
 }
 .content {
+    padding: 5px;
     height: 100%;
     display: flex;
 }
@@ -160,6 +161,19 @@ html, body {
 .button button:active:after {
     width: 200px;
     height: 200px;
+}
+.thumbnail {
+    width: 100%;
+    text-align: right;
+}
+img {
+    height: 100%;
+    width: 8.5vh;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 7.5px;
+    border: 1px solid rgb(68, 68, 68);
 }
 
 

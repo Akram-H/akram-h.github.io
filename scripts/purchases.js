@@ -32,8 +32,12 @@ const SetupUI = (doc) => {
                         </div>
                     </li>
                 </ul>
-                <div class="button">
-                    <button id="buy1">Report</button>
+                <div class="thumbnail">
+                    <img
+                        id="thumbnail-img"
+                        src="${data.thumbnail_url}"
+                        alt=""
+                    >
                 </div>
             </div>
         </div>

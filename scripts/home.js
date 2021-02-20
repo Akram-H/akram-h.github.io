@@ -66,8 +66,8 @@ closePopup.addEventListener('click', (e) => {
 const buy1 = document.querySelector('#buy1')
 buy1.addEventListener('click', (e) => {
     if (CurrentUser) {
+        window.location.href="p/purchase.html?product=Views"
         SendRequest(Math.round((new Date()).getTime()/1000), "Views", (new Date()).getTime() / 1000)
-        PopupOpen('Purchase successful! View your purchases on the Purchases page')
     } else {
         PopupOpen('You need to be logged in')
     }
@@ -75,8 +75,8 @@ buy1.addEventListener('click', (e) => {
 const buy2 = document.querySelector('#buy2')
 buy2.addEventListener('click', (e) => {
     if (CurrentUser) {
+        window.location.href="p/purchase.html?product=Comments Hearts"
         SendRequest(Math.round((new Date()).getTime()/1000), "Comments Hearts", (new Date()).getTime() / 1000)
-        PopupOpen('Purchase successful! View your purchases on the Purchases page')
     } else {
         PopupOpen('You need to be logged in')
     }
@@ -84,8 +84,8 @@ buy2.addEventListener('click', (e) => {
 const buy3 = document.querySelector('#buy3')
 buy3.addEventListener('click', (e) => {
     if (CurrentUser) {
+        window.location.href="p/purchase.html?product=Hearts"
         SendRequest(Math.round((new Date()).getTime()/1000), "Hearts", (new Date()).getTime() / 1000)
-        PopupOpen('Purchase successful! View your purchases on the Purchases page')
     } else {
         PopupOpen('You need to be logged in')
     }
@@ -93,8 +93,8 @@ buy3.addEventListener('click', (e) => {
 const buy4 = document.querySelector('#buy4')
 buy4.addEventListener('click', (e) => {
     if (CurrentUser) {
+        window.location.href="p/purchase.html?product=Follower"
         SendRequest(Math.round((new Date()).getTime()/1000), "Follower", (new Date()).getTime() / 1000)
-        PopupOpen('Purchase successful! View your purchases on the Purchases page')
     } else {
         PopupOpen('You need to be logged in')
     }
