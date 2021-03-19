@@ -2,91 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <title>MinaStar</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
     <body>
-        <div class="img-area"></div>
-
-        <div class="home">
-            
-            <div class="popup">
-                <div class="popup-content">
-                    <div class="text">
-                        <h4 class="msg"></h4>
-                    </div>
-                    <div class="button">
-                        <button class="popup-btn" id="Close-Popup">Close</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shop">
-                <h1 style="text-align: center;margin-top: 10px; margin-bottom: 10px;">Our Products</h1>
-                <div class="product" id="product-1">
-                    <div class="content">
-                        <ul class="text">
-                            <li><h1>Views</h1></li>
-                            <li><h4>Item details</h4></li>
-                        </ul>
-                        <div class="button">
-                            <button class="btn" id="buy1">Buy</button>
-                        </div>
-                        </div>
-                </div>
-                <div class="product" id="product-1">
-                    <div class="content">
-                        <ul class="text">
-                            <li><h1>Comments Hearts</h1></li>
-                            <li><h4>Item details</h4></li>
-                        </ul>
-                        <div class="button">
-                            <button class="btn" id="buy2">Buy</button>
-                        </div>
-                        </div>
-                </div>
-                <div class="product" id="product-1">
-                    <div class="content">
-                        <ul class="text">
-                            <li><h1>Hearts</h1></li>
-                            <li><h4>Item details</h4></li>
-                        </ul>
-                        <div class="button">
-                            <button class="btn" id="buy3">Buy</button>
-                        </div>
-                        </div>
-                </div>
-                <div class="product" id="product-1">
-                    <div class="content">
-                        <ul class="text">
-                            <li><h1>Follower</h1></li>
-                            <li><h4>Item details</h4></li>
-                        </ul>
-                        <div class="button">
-                            <button class="btn" id="buy4">Buy</button>
-                        </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
         <nav class="nav">
             
             <div class="logo">
-                <h4>MinaStar</h4>
+                <h4>Mina</h4>
             </div>
+    
             <ul class="nav-links">
-                <li style="display:none" class="logged-in"><a href="p/purchases.html">Purchases</a></li>
-                <li style="display:none" class="logged-in"><a href="p/settings.html">Settings</a></li>
-                <li style="display:none" class="logged-in"><a id='logout' href="#">Logout</a></li>
-                <li style="display:none" class="logged-out"><a href="p/login.html">Login</a></li>
-                <li style="display:none" class="logged-out"><a href="p/signup.html">Sign Up</a></li>
+                <li class="logged-out"><a href="#">Login</a></li>
+                <li class="logged-out"><a href="p/signup.html">Sign Up</a></li>
             </ul>
             <div class='burger'>
                 <div class='line1'></div>
@@ -94,13 +26,15 @@
                 <div class='line3'></div>
             </div>
         </nav>
-        <script src="scripts/navbar.js"></script>
+        
+        <div class="home">
+            <h1 id="bruh"> </h1>
+        </div>
 
         <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
-        <script src="scripts/FirebaseConfig.js"></script>
-
+        <script src="config/firebase.js"></script>
         <script>
             firebase.initializeApp(firebaseConfig);
             const auth = firebase.auth();
@@ -108,7 +42,7 @@
             db.settings({ timestampsInSnapshots: true });
         </script>
 
-        <script src="scripts/home.js"></script>
-
+        <script src="js/home.js"></script>
+        <script src="js/navbar.js"></script>
     </body>
 </html>

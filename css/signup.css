@@ -1,0 +1,65 @@
+.box {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 90px;
+    border-radius: 15px;
+
+    width: min-content;
+    padding: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.box h1 {
+    color: rgb(43, 42, 42);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box input {
+    width: 20vw;
+    height: 25px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid  rgb(153, 153, 153);
+}
+.box input::placeholder {
+    color: rgb(155, 155, 155);
+}
+.box input:focus {
+    border-bottom: 1px solid  rgb(86, 211, 200);
+    outline: none;
+    transition: 0.25s;
+}
+.submit {
+    border: 1px solid rgb(48, 48, 48) ;
+    border-radius: 7.5px;
+    padding: 10px;
+    width: 100%;
+}
+.submit:active {
+    border: 1px solid rgb(86, 211, 200);
+}
+.submit:focus {
+    outline: none;
+}
+
+#error {
+    
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 73, 73);
+}
+
+@media screen and (max-width: 1024px){
+    .box input {
+        width: 25vw;
+    }
+}
+@media screen and (max-width: 768px){
+    .box input {
+        width: 60vw;
+    }
+}
